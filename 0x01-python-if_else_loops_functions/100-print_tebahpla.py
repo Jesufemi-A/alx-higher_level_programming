@@ -5,5 +5,3 @@ for num in range(ord('z'), ord('a') - 1, -1):
     elif num % 2 != 0:
         result = chr(num - 32)
     print("{}".format(result), end="")
-    
-

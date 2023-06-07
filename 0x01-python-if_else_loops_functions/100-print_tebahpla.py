@@ -4,6 +4,6 @@ for num in range(ord('z'), ord('a') - 1, -1):
         result = chr(num)
     elif num % 2 != 0:
         result = chr(num - 32)
-    print(result, end="")
+    print("{}".format(result), end="")
     
 

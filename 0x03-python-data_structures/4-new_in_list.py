@@ -5,7 +5,6 @@ def new_in_list(my_list, idx, element):
             list_copy = my_list
             return list_copy
         else:
-            list_copy = my_list
-            list_copy = list_copy[:idx] + list_copy[idx + 1:]
-            list_copy.insert(idx, element)
-            return list_copy
+            my_list = my_list[:idx] + my_list[idx + 1:]
+            my_list.insert(idx, element)
+            return my_list

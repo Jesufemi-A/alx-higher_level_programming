@@ -4,4 +4,4 @@ def element_at(my_list, idx):
         return 'None'
     else:
         num = my_list[idx]
-        return ("{:d}".format(num))
+        return num

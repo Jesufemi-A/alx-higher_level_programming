@@ -2,9 +2,9 @@
 def uniq_add(my_list=[]):
     new = []
     for num in my_list:
-        if new not in new:
+        if num not in new:
             new.append(num)
+    sum = 0
     for num in new:
-        sum = 0
         sum += num
     return sum

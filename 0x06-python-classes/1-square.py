@@ -13,7 +13,7 @@ class Square:
         special method for initialising attrihutes
         """
 
-        self._size = size
+        self.__size = size
 
 
 sq = Square(self)

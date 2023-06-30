@@ -13,4 +13,4 @@ class Square:
         special method for initialising attrihutes
         """
 
-        self._size
+        self._size = size

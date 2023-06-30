@@ -14,6 +14,3 @@ class Square:
         """
 
         self.__size = size
-
-
-sq = Square(size)

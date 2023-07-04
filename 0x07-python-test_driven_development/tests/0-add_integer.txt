@@ -1,0 +1,36 @@
+#Test code for a function that returns the of sum of two integers
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+
+When both values are positive integers
+>>> result = add_integer(2, 5)
+>>> print(result)
+7
+
+When both values are zeros
+>>> result = add_integer(0, 0)
+>>> print(result)
+0
+
+When one of the value is negative
+>>> result = add_integer(-2, 5)
+>>> print(result)
+3
+
+When one of the value is a float
+>>> result = add_integer(2.0, 5)
+>>> print(result)
+7
+
+When a is a string
+>>> result = add_integer('string', 5)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+When b is a string
+>>> result = add_integer(2, 'string2')
+Traceback (most recent call last):
+...
+TypeError: b must be an integer

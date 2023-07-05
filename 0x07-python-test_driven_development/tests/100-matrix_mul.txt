@@ -1,8 +1,7 @@
 #Testing function that multiply 2 matrices
 
 
->>> matrix_mul = __import__("100-matrix_mul").matrix_mul
-
+>>> matrix_mul = __import__('100-matrix_mul').matrix_mul
 >>> a = [[2, 4, 6], [6, 4, 3], [4, 2, 5]]
 >>> matrix_mul("string", a)
 Traceback (most recent call last):
@@ -10,6 +9,6 @@ Traceback (most recent call last):
 TypeError: m_a must be a list
 
 >>> matrix_mul(a, True)
-Traceback (most recent call last)
+Traceback (most recent call last):
 ...
 TypeError: m_b must be a list

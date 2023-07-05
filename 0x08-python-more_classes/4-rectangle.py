@@ -92,10 +92,11 @@ class Rectangle:
                 else:
                     continue
             return ""
-  
+
     def __repr__(self):
         """
-        helper function for repr to be able to recreate a new instance by using eval()
+        helper function for repr
+        to recreate a new instance by using eval()
         """
 
         return "Rectangle(" + str(self.width) + "," + str(self.height) + ")"

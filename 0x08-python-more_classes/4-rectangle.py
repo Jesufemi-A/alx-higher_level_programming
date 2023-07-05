@@ -75,7 +75,7 @@ class Rectangle:
             return 0
         else:
             return 2 * (self.width + self.height)
-    
+
     def print(self):
         """
         to print a rectangle

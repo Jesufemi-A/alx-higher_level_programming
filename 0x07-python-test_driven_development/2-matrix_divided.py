@@ -3,6 +3,7 @@
 This module divides all elements of a matrix
 """
 
+
 def matrix_divided(matrix, div):
     """
     checks for validation and divide elemens in matrix
@@ -19,13 +20,13 @@ def matrix_divided(matrix, div):
 
     if div == 0:
         raise ZeroDivisionError("division by Zero")
-    elif isinstance(div, (int, float)):
+    elif not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
     elif isinstance(matrix, list):
         for row in matrix:
             row_size = set(len(row))
-        if len(row_size) != 1:
-            raise TypeError("Each row of the matrix must have the same size")
+            if len(row_size) != 1:
+                raise TypeError("Each row of the matrix must have the same size")
         for row in matrix:
             if isinstance(row, list):
                 for inner in row:

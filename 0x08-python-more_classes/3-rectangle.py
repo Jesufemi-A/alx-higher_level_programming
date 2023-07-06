@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module contain class Rectangle
+class Rectangle
 """
 
 
@@ -75,6 +75,15 @@ class Rectangle:
             return 0
         else:
             return 2 * (self.width + self.height)
+
+    def print(self):
+        for i in range(self.height):
+            for j in range(self.width):
+                print('#', end='')
+            if i != (self.height - 1):
+                print
+            else:
+                continue
 
     def __str__(self):
         """

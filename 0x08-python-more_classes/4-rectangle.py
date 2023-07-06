@@ -76,6 +76,20 @@ class Rectangle:
         else:
             return 2 * (self.width + self.height)
 
+    def print(self):
+        """
+        to print a rectangle
+        with the character #
+        """
+
+        for i in range(self.height):
+            for j in range(self.width):
+                print('#', end='')
+            if i != (self.height - 1):
+                print()
+            else:
+                continue
+
     def __str__(self):
         """
         helper function for str
@@ -99,4 +113,4 @@ class Rectangle:
         to recreate a new instance by using eval()
         """
 
-        return "Rectangle(" + str(self.width) + "," + str(self.height) + ")"
+        return "Rectangle(" + str(self.width) + ", " + str(self.height) + ")"

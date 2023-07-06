@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 def magic_string():
-    if i > 0
-    return "BestSchool" * i
+    magic_string.n = gettr(magic_string, 'n', 0) + 1
+    return "BestSchool," * (magic_string.n - 1) + "BestSchool"
 	

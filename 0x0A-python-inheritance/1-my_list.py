@@ -10,8 +10,8 @@ class MyList(list):
     """
 
     def __init__(self):
-        super.__init__(self)
+        super().__init__(self)
 
     def print_sorted(self):
-        new_list = self.sorted(list)
+        new_list = sorted(self)
         print(new_list)

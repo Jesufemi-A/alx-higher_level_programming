@@ -12,4 +12,4 @@ def read_file(filename=""):
 
     with open(filename, "r", encoding="utf-8") as file_a:
         file_content = file_a.read()
-        return file_content
+        print(file_content, end="")

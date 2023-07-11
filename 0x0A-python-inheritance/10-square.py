@@ -15,12 +15,11 @@ class Square(Rectangle):
         Intialises the instance variable
         """
         self.integer_validator("size", size)
-        self.__size = size
-        super().__init__(self, width, height)
+        Rectangle.__init__(self, size, size)
 
     def area(self):
         """
         calculate area
         """
 
-        return self.__width * self.__height
+        return Rectangle.area(self)

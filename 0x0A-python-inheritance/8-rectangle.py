@@ -15,7 +15,7 @@ class Rectangle(BaseGeometry):
         """
         This intializes the instance attributes
         """
-        self.integer_validator("width", width)
-        self.integer_validator("height", width)
+        super().integer_validator("width", width)
+        super().integer_validator("height", width)
         self.__width = width
         self.__height = height

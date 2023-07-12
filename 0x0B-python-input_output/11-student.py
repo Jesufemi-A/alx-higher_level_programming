@@ -39,4 +39,5 @@ class Student:
         reload from json
         """
 
-        self.__dict__ = json
+        for attr, value in json.items():
+            setattr(self, attr, value)

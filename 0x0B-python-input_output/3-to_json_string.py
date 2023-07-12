@@ -3,6 +3,7 @@
 contains a function that returns
 jsn representation of string
 """
+import json
 
 
 def to_json_string(my_obj):

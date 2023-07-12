@@ -14,3 +14,4 @@ def save_to_json_file(my_obj, filename):
     json_rep = json.dumps(my_obj)
     with open(filename, 'w', encoding='utf-8') as file_w:
         num_chars_written = file_w.write(json_rep)
+        return num_chars_written

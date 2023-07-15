@@ -6,10 +6,10 @@ contain class Base
 
 class Base:
     """
-    Base class for other classes in this project
+    Base class for other sub classes in this project
     """
     
-    __nb_object == 0
+    __nb_object = 0
 
     def __init__(self, id=None):
         if id is not None:

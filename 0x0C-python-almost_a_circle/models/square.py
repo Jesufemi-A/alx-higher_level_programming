@@ -22,3 +22,21 @@ class Square(Rectangle):
         """
         return "[square] (" + str(self.id) + ") " + str(self.x) + "/" + str(self.y) + " - " + str(self.width)
 
+    @property
+    def size(self):
+        """
+        getter to return size
+        """
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """
+        setter to access and modify size
+        """
+        if type(value) != int:
+            raise TypeError('width must be an integer')
+        if value <= 0:
+            raise ValueError('width must be > 0')
+        self.width = value
+        self.width = value

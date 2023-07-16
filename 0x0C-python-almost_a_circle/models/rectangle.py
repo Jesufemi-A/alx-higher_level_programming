@@ -34,7 +34,7 @@ class Rectangle(Base):
         if type(value) != int:
             raise TypeError('width must be an integer')
         if value <= 0:
-            raise ValueError('width must > 0')
+            raise ValueError('width must be > 0')
         self.__width = value
 
 
@@ -89,7 +89,7 @@ class Rectangle(Base):
             if self.x > 0:
                 for x_axis in range(self.x):
                     print(' ', end='')
-            for w in range(self.x):
+            for w in range(self.width):
                 print('#', end='')
             print()
 

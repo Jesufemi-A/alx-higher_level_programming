@@ -9,11 +9,15 @@ class Base:
     Base class for other sub classes in this project
     """
     
-    __nb_object = 0
+    __nb_objects = 0
 
     def __init__(self, id=None):
-        if id is not None:
+        """
+        initialise the attributes
+        """
+
+        if id != None:
             self.id = id
         else:
-            __nb_object += 1
-            id = __nb_object
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects

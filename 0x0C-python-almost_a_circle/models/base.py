@@ -49,7 +49,7 @@ class Base:
                 for i in list_objs:
                     a = i.to_dictionary()
                     list_dict.append(a)
-            file_w.write(Base.to_json_string(list_dict))
+                file_w.write(Base.to_json_string(list_dict))
 
     @staticmethod
     def from_json_string(json_string):

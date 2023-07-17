@@ -71,8 +71,10 @@ class Base:
         elif cls.__name__ == "Square":
             dummy = cls(1, 1)
         else:
-            raise ValueError('unsupported class')
-        dummy.update(**dictionary)
+            dummy = None
+
+        if dummy is not None:
+            dummy.update(**dictionary)
         return dummy
 
     @classmethod

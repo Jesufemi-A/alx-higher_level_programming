@@ -8,6 +8,7 @@ from models.rectangle import Rectangle
 from unittest.mock import patch
 from io import StringIO
 
+
 class TestRectangle(unittest.TestCase):
     """
     define test for Rectangle
@@ -18,7 +19,7 @@ class TestRectangle(unittest.TestCase):
         execute before each test
         """
         Base._Base__nb_objects = 0
-        
+
     def test_attribute_value(self):
         """
         test if the argument are properly assigned
@@ -41,7 +42,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rect.height, 3)
         self.assertEqual(rect.x, 2)
         self.assertEqual(rect.y, 3)
-        
+
         rect1 = Rectangle(3, 5, 1, 2, 2)
         self.assertEqual(rect1.id, 2)
         self.assertEqual(rect1.width, 3)
@@ -79,7 +80,7 @@ class TestRectangle(unittest.TestCase):
                 raise ValueError('width must be > 0')
             if height <= 0:
                 raise ValueError('height must be > 0')
-    
+
     def test_x_y_not_less_xer0(self):
         """
         test that x and y are >= 0
@@ -105,7 +106,7 @@ class TestRectangle(unittest.TestCase):
                 raise TypeError('x must be intger')
             if type(y) != int:
                 raise TypeError('y must be integer')
-    
+
     def test_area_value_is_return(self):
         """
         test that the area value of instance of
@@ -113,17 +114,16 @@ class TestRectangle(unittest.TestCase):
         """
         rect = Rectangle(3, 5, 1, 1)
         self.assertEqual(rect.area(), 15)
-    
-    
+
     def test_display_displays(self):
         """
         test that display method works properly
         """
         rect = Rectangle(2, 5)
-        with patch('sys.stdout', new_callable = StringIO()) as out:
+        with patch('sys.stdout', new_callable=StringIO()) as out:
             rect.display()
             self.assertEqual(out.getvalue(), "##\n##\n##\n##\n##\n")
-    
+
     def test_args_value_assigned_to_attributes(self):
         """
         test that the *args values are properly assigned to the attributes
@@ -142,13 +142,15 @@ class TestRectangle(unittest.TestCase):
         test that __str__ works properly
         """
         rect = Rectangle(1, 2, 3, 4, 5)
-        self.assertEqual(rect.__str__(), f"[Rectangle] ({rect.id}) {rect.x}/{rect.y} - {rect.width}/{rect.height}")
+        string = f"[Rectangle] ({rect.id}) {rect.x}/{rect.y} - {rect.width}\
+        /{rect.height}"
+        self.assertEqual(rect.__str__(), string)
 
         rect = Rectangle(3, 4)
-        self.assertEqual(rect.__str__(), f"[Rectangle] ({rect.id}) {rect.x}/{rect.y} - {rect.width}/{rect.height}")
+        self.assertEqual(rect.__str__(), string)
 
         """rect = Rectangle(2)
-        self.assertEqual(rect.__str__(), f"[Rectangle] ({rect.id}) {rect.x}/{rect.y} - {rect.width}/{rect.height}")"""
+        self.assertEqual(rect.__str__(), string)"""
 
     def test_all_attributes_update(self):
         """"
@@ -194,7 +196,7 @@ class TestRectangle(unittest.TestCase):
         rect = Rectangle(1, 2, 3, 4, 5)
         args = (7, 8, 9)
         rect.update(*args)
-        
+
         self.assertEqual(rect.id, 7)
         self.assertEqual(rect.width, 8)
         self.assertEqual(rect.height, 9)

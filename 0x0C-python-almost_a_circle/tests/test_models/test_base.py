@@ -65,6 +65,3 @@ class TestBase(unittest.TestCase):
         self.assertEqual(base3.id, 1)
         self.assertEqual(base4.id, 3)
         self.assertEqual(base5.id, 2)
-
-if __name__ == '__main__':
-    unittest.main()

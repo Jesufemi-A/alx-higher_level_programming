@@ -42,7 +42,7 @@ class Base:
         """
         with open("Rectangle.json", "w", encoding="utf-8") as file_w:
             list_dict = []
-            if list_objs is None or len(list_objs) == 0:
+            if list_objs is None and len(list_objs) == 0:
                 file_w.write([])
             else:
                 for i in list_objs:

@@ -4,23 +4,22 @@ contains the class Square
 """
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """
     defines class Square, inherits from class Rectangle
     """
-
     def __init__(self, size, x=0, y=0, id=None):
         """
         initialises the attributes
         """
         super().__init__(size, size, x, y, id)
 
-
     def __str__(self):
         """
         return a string representation
         """
-        return "[square] (" + str(self.id) + ") " + str(self.x) + "/" + str(self.y) + " - " + str(self.width)
+        return f"[square] ({self.id}) {self.x}/{self.y} - {self.width}"
 
     @property
     def size(self):
@@ -40,7 +39,6 @@ class Square(Rectangle):
             raise ValueError('width must be > 0')
         self.width = value
         self.width = value
-
 
     def update(self, *args, **kwargs):
         """
@@ -69,4 +67,3 @@ class Square(Rectangle):
                 "x": self.x,
                 "y": self.y
                 }
-

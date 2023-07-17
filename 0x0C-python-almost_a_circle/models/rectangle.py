@@ -4,6 +4,7 @@ contains class Rectangle
 """
 from models.base import Base
 
+
 class Rectangle(Base):
     """
     class Rectangle
@@ -36,7 +37,6 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError('width must be > 0')
         self.__width = value
-
 
     @property
     def height(self):
@@ -74,7 +74,6 @@ class Rectangle(Base):
             raise ValueError('y must be >= 0')
         self.__y = value
 
-
     def area(self):
         return self.width * self.height
 
@@ -97,8 +96,9 @@ class Rectangle(Base):
         """
         return a string representation
         """
-        return "[Rectangle] (" + str(self.id) + ") " + str(self.x) + "/" + str(self.y) + " - " + str(self.width) + "/" + str(self.height)
-    
+        return f"[Rectangle] ({self.id}) \
+                {self.x}/{self.y} - {self.width}/{self.height}"
+
     def update(self, *args, **kwargs):
         """
         update and assign values to the attributes
@@ -114,7 +114,7 @@ class Rectangle(Base):
                 self.x = args[3]
             if len(args) >= 5:
                 self.y = args[4]
-    
+
         for key, value in kwargs.items():
             setattr(self, key, value)
 
@@ -129,4 +129,3 @@ class Rectangle(Base):
                 "x": self.x,
                 "y": self.y
                 }
-

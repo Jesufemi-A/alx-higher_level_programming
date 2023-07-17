@@ -4,11 +4,12 @@ contain class Base
 """
 import json
 
+
 class Base:
     """
     Base class for other sub classes in this project
     """
-    
+
     __nb_objects = 0
 
     def __init__(self, id=None):
@@ -16,12 +17,12 @@ class Base:
         initialise the attributes
         """
 
-        if id != None:
+        if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-    
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """
@@ -43,7 +44,7 @@ class Base:
             list_dict = []
             if list_objs is None or len(list_objs) == 0:
                 file_w.write([])
-            else: 
+            else:
                 for i in list_objs:
                     a = i.to_dictionary()
                     list_dict.append(a)
@@ -72,7 +73,7 @@ class Base:
             raise ValueError('unsupported class')
         dummy.update(**dictionary)
         return dummy
-    
+
     @classmethod
     def load_from_file(cls):
         """
@@ -80,16 +81,13 @@ class Base:
         """
         if cls.__name__ == "Rectangle":
             with open("Rectangle.json", "r", encoding="utf-8") as read_f:
-                if "Rectangle.json" == False:
+                if "Rectangle.json" is False:
                     return "[]"
                 list_from_json = json.loads(read_f.read())
                 return list_from_json
         if cls.__name__ == "Square":
             with open("Square.json", "r", encoding="utf-8") as read_f:
-                if "Square.json" == False:
+                if "Square.json" is False:
                     return "[]"
                 list_from_json = jsons.loads(read.f.read())
                 return list_from_json
-
-
-

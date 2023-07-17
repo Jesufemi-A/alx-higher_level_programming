@@ -40,9 +40,15 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """
+        return the height attribute
+        """
         return self.__height
 
     @height.setter
+    """
+    access and set height attribute
+    """
     def height(self, value):
         if type(value) != int:
             raise TypeError('height must be an integer')
@@ -51,10 +57,16 @@ class Rectangle(Base):
         self.__height = value
 
     @property
+    """
+    return value for x
+    """
     def x(self):
         return self.__x
 
     @x.setter
+    """
+    setter for x value
+    """
     def x(self, value):
         if type(value) != int:
             raise TypeError('x must be an integer')
@@ -63,10 +75,16 @@ class Rectangle(Base):
         self.__x = value
 
     @property
+    """
+    return y value
+    """
     def y(self):
         return self.__y
 
     @y.setter
+    """
+    setter for y value
+    """
     def y(self, value):
         if type(value) != int:
             raise TypeError('y must be an integer')
@@ -75,6 +93,9 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """
+        return the area of the object
+        """
         return self.width * self.height
 
     def display(self):

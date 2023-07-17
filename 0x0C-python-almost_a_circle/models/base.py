@@ -40,7 +40,8 @@ class Base:
         writes the JSON string representation
         of list_objs to a file
         """
-        with open("Rectangle.json", "w", encoding="utf-8") as file_w:
+        filename = "{}.json".format(cls.__name__)
+        with open(filename, "w", encoding="utf-8") as file_w:
             list_dict = []
             if list_objs is None and len(list_objs) == 0:
                 file_w.write([])
@@ -48,7 +49,7 @@ class Base:
                 for i in list_objs:
                     a = i.to_dictionary()
                     list_dict.append(a)
-            file_w.write(cls.to_json_string(list_dict))
+            file_w.write(filename.to_json_string(list_dict))
 
     @staticmethod
     def from_json_string(json_string):

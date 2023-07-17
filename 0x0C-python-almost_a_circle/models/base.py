@@ -68,7 +68,7 @@ class Base:
         """
         if cls.__name__ == "Rectangle":
             dummy = cls(1, 2, 3, 4)
-        elif cls.__name__ == "square":
+        elif cls.__name__ == "Square":
             dummy = cls(1, 1)
         else:
             raise ValueError('unsupported class')

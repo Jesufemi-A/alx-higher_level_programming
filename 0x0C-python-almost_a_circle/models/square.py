@@ -40,7 +40,7 @@ class Square(Rectangle):
         """
         method to update attributes
         """
-        if args is not None or len(args) != 0:
+        if args is not None and len(args) != 0:
             if len(args) >= 1:
                 self.id = args[0]
             if len(args) >= 2:

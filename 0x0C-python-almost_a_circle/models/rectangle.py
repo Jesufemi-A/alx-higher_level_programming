@@ -103,7 +103,7 @@ class Rectangle(Base):
         """
         update and assign values to the attributes
         """
-        if args is not None:
+        if args is not None and len(args) != 0:
             if len(args) >= 1:
                 self.id = args[0]
             if len(args) >= 2:

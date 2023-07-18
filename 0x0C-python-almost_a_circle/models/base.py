@@ -3,6 +3,7 @@
 contain class Base
 """
 import json
+import os
 
 
 class Base:
@@ -80,17 +81,13 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """
-        return a list of instances
+        load json from file
         """
-        if cls.__name__ == "Rectangle":
-            with open("Rectangle.json", "r", encoding="utf-8") as read_f:
-                if "Rectangle.json" is False:
-                    return "[]"
-                list_from_json = json.loads(read_f.read())
-                return list_from_json
-        if cls.__name__ == "Square":
-            with open("Square.json", "r", encoding="utf-8") as read_f:
-                if "Square.json" is False:
-                    return "[]"
-                list_from_json = jsons.loads(read.f.read())
-                return list_from_json
+        filename = "{}.json".format(cls.__name__)
+        if not os.path.exists(filename):
+            return []
+        with open(filename, 'r') as file:
+            json_data = file.read()
+            list_dicts = cls.from_json_string(json_data)
+            instances = [cls.create(**data) for data in list_dicts]
+            return instances

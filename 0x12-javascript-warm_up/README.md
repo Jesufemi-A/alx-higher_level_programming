@@ -1,0 +1,1 @@
+This is a JavaScript Alx Project for brushing throught fundamental concepts in JavaScript such as variables, data types, objects and arrays, function etc.

@@ -5,8 +5,10 @@ if (isNaN(squareSize)) {
   console.log('Missing Size');
 } else {
   for (let i = 0; i < squareSize; i++) {
+    let row = '';
     for (let j = 0; j < squareSize; j++) {
-      console.log('X');
+        row += 'X'
     }
+    console.log(row);
   }
 }

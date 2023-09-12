@@ -3,7 +3,8 @@
 class Rectangle {
   constructor (w, h) {
     if (w <= 0 || h <= 0 || typeof w !== 'number' || typeof h !== 'number') {
-      return {};
+      const emptyRectangle = Object.create(Rectangle.prototype);
+      return emptyRectangle;
     }
     this.width = w;
     this.height = h;

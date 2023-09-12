@@ -1,0 +1,1 @@
+This is a JavaScript project on Object-oriented programming and closure

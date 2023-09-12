@@ -17,6 +17,7 @@ class Rectangle {
         rect += 'X';
       }
       console.log(rect);
+      rect = '';
     }
   }
 }

@@ -1,9 +1,14 @@
 #!/usr/bin/node
 
-if (process.argv[2] == undefined) {
-    console.log(0);
-} else if (process.argv.length === 3) {
-    console.log(0)
+const args = process.argv.slice(2);
+
+if (args.length <= 1) {
+  console.log(0);
 } else {
-    
+  const integers = args.map(Number).sort((a, b) => b - a);
+
+  // Find the second largest integer
+  const secondLargest = integers[1];
+
+  console.log(secondLargest);
 }

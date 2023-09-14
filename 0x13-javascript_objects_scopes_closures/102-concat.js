@@ -19,8 +19,8 @@ try {
   // Read the contents of the second source file
   const data2 = fs.readFileSync(sourceFile2, 'utf8');
 
-  // Concatenate the contents of the two source files
-  const concatenatedData = data1 + data2;
+  // Concatenate the contents of the two source files with a newline character in between
+  const concatenatedData = data1 + '\n' + data2 + '\n';
 
   // Write the concatenated data to the destination file
   fs.writeFileSync(destinationFile, concatenatedData);

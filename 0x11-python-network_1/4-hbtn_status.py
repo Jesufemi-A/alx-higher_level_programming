@@ -1,0 +1,13 @@
+#!/usr/bin/python3
+"""a python script that fetches data from
+https://alx-intranet.hbtn.io/status
+with the requests package
+"""
+import requests
+
+
+if __name__ == "__main__":
+    response = requests.get("https://alx-intranet.hbtn.io/status")
+    print("Body response:")
+    print(f"\t- type: {type(response.text)}")
+    print(f"\t- content: {response.text}")
